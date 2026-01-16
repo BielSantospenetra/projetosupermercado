@@ -1,0 +1,1 @@
+alert("cadastre-se para que receba descontos.");

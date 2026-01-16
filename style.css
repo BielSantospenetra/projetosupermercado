@@ -1,0 +1,66 @@
+#paineldecompras {
+    width: 300px;
+    height: 200px;
+
+    
+
+
+}
+
+
+
+
+
+
+#produtosempromoção {
+    width: 900px;
+    height: 200px;
+}
+
+.linhadeumaclassedosprodutos {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* faltava o px */
+}
+
+.cardpaes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centro vertical */
+    align-items: center;     /* centro horizontal */
+
+    width: 200px;
+    height: 270px;
+    background-color: white;
+    border:2px solid rgba(0, 0, 0, 0.4);
+
+
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.cardpaes:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.90);
+}
+
+
+
+.adicionar {
+    background-color: #2e7d32;   /* verde supermercado */
+  color: white;
+  width: 140px;
+  height: 50px;
+  
+}
+/* 
+.categoria  {
+  height: 100%; 
+  margin-bottom: 10px;
+}
+
+
+*/
+
+
+
+
+
