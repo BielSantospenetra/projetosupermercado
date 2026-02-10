@@ -109,7 +109,20 @@ const produtos = [
 
 
 function buscarproduto() {
-   
+    const texto = document.getElementById("buscar").value.toLowerCase();
+
+    const queijo = document.getElementById("queijo");
+    
+    // reset
+    queijo.style.transform = "scale(1)";
+    
+
+    if (texto === "queijo" ) {
+        queijo.style.transform = "scale(1.3)";
+    }
+
+    
+}
 
 
 
@@ -128,7 +141,7 @@ botoes.forEach(botao => {
     adicionarProduto(nome, preco);
   });
 });
-}
+
 function adicionarProduto(nome, preco) {
   const carrinho = document.getElementById("carrinho");
 
