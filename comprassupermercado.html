@@ -15,19 +15,37 @@
 
 
 
-
+<header> 
 <h1> Supermercado Supernova</h1>
+<button onclick="cadastrar()"> cadastrar</button>
+</header>
+
+<div id="modal" class="modal">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fechar()">X</span>
+        
+
+        <h2>Cadastro</h2>
+        <input type="text" placeholder="email">
+        <input type="text" placeholder="senha"> 
+        
+        
+    </div>
+</div>
 <div id="paineldecompras">
 <h2> compras e total das compras</h2>
+<div id="carrinho"> </div>
 <p> </p>
 
 </div>
 <div id="produtosempromoção">
 
 
+    
 <div class="pesquisa">
     <input type="text" id="buscar" placeholder="Pesquisar produto...">
-    <button onclick="pesquisarProduto()">Buscar</button>
+    <button onclick="buscarproduto()">Buscar</button>
+    <div id="sugestoes"> </div>
 </div>
 
 <div class="secao">
@@ -41,22 +59,22 @@
  
 
 
-<div class="cardpaes"> 
+<div class="cards" id="" data-nome="paodeforma"> 
 <img src="https://media.istockphoto.com/id/503758164/pt/vetorial/fatias-de-p%C3%A3o-de-trigo-fresco.jpg?s=1024x1024&w=is&k=20&c=JmYehPPomlbkhXqepFTtWyjT8vffRqMDat25YAw41-g=" width="70px" height="70px">
 <p> pão de forma</p>
 <p> R$ 9.00</p>
 <button class="adicionar">adicionar ao carrinho</button>
 </div>
 
-<div class="cardpaes"> 
+<div class="cards" data-nome="paofrances"> 
 <img src="https://media.istockphoto.com/id/1315527369/pt/foto/french-bread-traditional-brazilian-bread.jpg?s=1024x1024&w=is&k=20&c=agoZu2zRLw3wun7C7bdBNMUxijWWv32lJIKzxQ6b2P4=" width="70px" height="90px">
 <p> pão françes</p>
 <p> R$ 2.00</p>
 <button class="adicionar">adicionar ao carrinho</button>
 </div>
 
-<div class="cardpaes"> 
-<img >
+<div class="cards" data-nome="manteiga"> 
+<img src="C:\Users\Samsung\Downloads\ideativas-tlm-butter-6600552_1280.png" width="70px" height="70px">
 <p> manteiga</p>
 <p> R$ 5.00</p>
 <button class="adicionar">adicionar ao carrinho</button>
@@ -64,30 +82,369 @@
 
 
 
-<div class="cardpaes"> 
-<img >
+<div class="cards" id="queijo" data-nome="queijo" data-preco="7"> 
+<img src="C:\Users\Samsung\Downloads\openclipart-vectors-cheese-160099_1280.png" width="70px" height="70px">
 <p> queijo</p>
 <p> R$ 7.00</p>
 <button class="adicionar">adicionar ao carrinho</button>
 </div>
 
-<div class="cardpaes"> 
-<img >
+<div class="cards" data-nome="mortadela"> 
+<img src="">
 <p> mortadela</p>
 <button class="adicionar">adicionar ao carrinho</button>
 </div>
 
-<div class="cardpaes"> 
+<div class="cards" data-nome="geleia"> 
 <img >
 <p> geleia </p>
 <button class="adicionar">adicionar ao carrinho</button>
 </div>
 
-<div class="cardpaes"> 
+<div class="cards" data-nome="nescau"> 
 <img >
 <p> nescau </p>
 <button class="adicionar">adicionar ao carrinho</button>
 </div>
+
+
+
+
+<div class="cards" data-nome="biscoito" data-preco="5"> 
+<img >
+<p> Biscoito maizena </p>
+<button class="adicionar">adicionar ao carrinho</button>
+</div>
+<div class="cards"> 
+<img >
+<p> Biscoito crean cracker </p>
+<button class="adicionar">adicionar ao carrinho</button>
+</div>
+</div>
+
+
+<h2> bebidas </h2>
+<div class="linhadeumaclassedosprodutos">
+
+
+
+
+
+
+
+<div class="cards" data-nome="brahma"> 
+<img>
+<p> Brahma lata 450ml </p>
+<p> R$ 7.99</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards" data-nome="brahmagarrafa"> 
+<img>
+<p> Brahma garrafa 1L</p>
+<p> R$ 14.99</p>
+<button  class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards" data-nome="itaipava"> 
+<img>
+<p> itaipava lata 400ml</p>
+<p> R$ 5.40</p>
+<button class="adicionar"> adicionar ao carrinho</button> 
+</div>
+
+<div class="cards">
+<img>
+<p> itaipava garrafa 1.5L </p>
+<p> R$ 17.99</p>
+<p></p>
+<button class="adicionar"> adicionar ao carrinho</button>   
+</div>
+
+<div class="cards"> 
+<img> 
+<p> skol lata 450ml</p>
+<p> R$ 7.20</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img> 
+<p> skol garrafa 1L</p>
+<p> R$ 14.20</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img> 
+<p> Ice vodka 500ml</p>
+<p> R$ 9.50</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+
+
+
+
+
+
+</div>
+
+<h2> café e leite</h2>
+<div class="linhadeumaclassedosprodutos"> 
+
+<div class="cards"> 
+<img>
+<p> café melita 250g  </p>
+<p> R$ 15.99</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>  
+
+<div class="cards"> 
+<img>
+<p> café 3 corações 250g  </p>
+<p> R$ 17.99</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>  
+
+<div class="cards"> 
+<img>
+<p> café pinpinela 250g  </p>
+<p> R$ 17.50</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>  
+
+
+<div class="cards"> 
+<img>
+<p> café evolutivo 250g  </p>
+<p> R$ 14.50</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>  
+
+
+<div class="cards"> 
+<img>
+<p> café pilão 500g  </p>
+<p> R$ 25.50</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div> 
+
+<div class="cards"> 
+<img>
+<p> café pinpinela 500g</p>
+<p> R$ 27.90</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>  
+
+<div class="cards"> 
+<img>
+<p> café 3 corações 500g</p>
+<p> R$ 26.90</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>  
+
+<div class="cards"> 
+<img>
+<p> café evolutivo 500g</p>
+<p> R$ 22.50</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>  
+
+
+</div>
+
+<h2> biscoitos </h2>
+<div class="linhadeumaclassedosprodutos"> 
+
+<div class="cards"> 
+<img>
+<p> biscoito maizena vitarela  250g</p>
+<p> R$ 7.50</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div> 
+    
+
+<div class="cards"> 
+<img>
+<p> biscoito maizena vitarela  500g</p>
+<p> R$ 12.20</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div> 
+
+
+
+
+
+<div class="cards"> 
+<img>
+<p> chettos sabor queijo 200g</p>
+<p> R$ 4.50</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div> 
+<div class="cards"> 
+<img>
+<p> doritos sabor ketchup 250g</p>
+<p> R$ 4.99</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div> 
+
+
+
+
+
+
+
+<!-- Brahma lata 450ml Brahma garrafa 1L itaipava lata 400ml itaipava garrafa 1.5L skol lata 450ml skol garrafa 1L Ice vodka 500ml
+café melita 250g  café 3 corações 250g café pinpinela 250g  café evolutivo 250g  café pilão 500g café pinpinela 500g café 3 corações 500g café evolutivo 500g
+biscoito maizena vitarela  250g biscoito maizena vitarela  500g biscoito de rosquinha  mabel  500g chettos sabor queijo 200g doritos sabor ketchup 250g
+-->
+
+</div>
+<h2> massas e cereais</h2>
+<div class="linhadeumaclassedosprodutos"> 
+
+
+
+
+
+
+<div class="cards"> 
+<img>
+<p> macarrão espaguete 400g</p>
+<p> R$ 4.50</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div> 
+
+
+<div class="cards"> 
+<img>
+<p> macarrão espaguete 800g</p>
+<p> R$ 9.00</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div> 
+
+
+
+<div class="cards"> 
+<img>
+<p> macarrão parafuso 450g</p>
+<p> R$ 5.00</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div> 
+
+
+<div class="cards"> 
+<img>
+<p> macarrão parafuso 900g</p>
+<p> R$ 9.90</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img>
+<p> arroz branco 1k</p>
+<p> R$ 4.40</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img>
+<p> arroz branco 5k</p>
+<p> R$ 15.00</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img>
+<p> feijão 500g</p>
+<p> R$ 2.50</p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img>
+<p> feijão 1k</p>
+<p> R$ 4.50 </p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+</div>
+
+<h2> carnes e outros</h2>
+<div  class="linhadeumaclassedosprodutos"> 
+
+<div class="cards"> 
+<img>
+<p> peito de frango 1k</p>
+<p> R$ 14.50 </p>
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img>
+<p> costela kg</p>
+<p> R$ 15.00 kg </p>
+<input type="number" step="0.100"> 
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img>
+<p> bife de hamburguer</p>
+<p> R$ 1.20 2 cada </p> 
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img>
+<p> caixa de 20 ovos</p>
+<p> R$ 9.50 </p> 
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img>
+<p> chiken steak 200g</p>
+<p> R$ 11.80 </p> 
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img>
+<p> coxinha de frango 1kg</p>
+<p> R$ 14.90 </p> 
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+<div class="cards"> 
+<img>
+<p> contrafilé promoção</p>
+<p> R$ 29.90 kg </p>
+<input type="number" step="0.100"> 
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+
+
+
+
+<div class="cards"> 
+<img>
+<p> hamburguer microondas</p>
+<p> R$ 20.90 </p> 
+<button class="adicionar"> adicionar ao carrinho</button>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
 
 </div>
 
