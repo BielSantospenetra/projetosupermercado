@@ -1,5 +1,6 @@
-alert("cadastre-se para que receba descontos.");
-
+setTimeout(() => { 
+  alert("cadastre-se para que receba descontos.");
+}, 2000);
 
 
 
@@ -108,21 +109,36 @@ const produtos = [
 
 
 
+
+
+
+
 function buscarproduto() {
+  console.log("hello world");
     const texto = document.getElementById("buscar").value.toLowerCase();
 
-    const queijo = document.getElementById("queijo");
-    
-    // reset
-    queijo.style.transform = "scale(1)";
-    
+    const cards = document.querySelectorAll(".cards");
 
-    if (texto === "queijo" ) {
-        queijo.style.transform = "scale(1.3)";
-    }
+    cards.forEach(cards => {
+        const nome = cards.dataset.nome
 
-    
+        // reset
+        cards.style.transform = "scale(1)";
+
+        if (nome.includes(texto) && texto !== "") {
+            cards.style.transform = "scale(1.5)";
+        }
+    });
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -166,6 +182,23 @@ function fechar() {
 }
 
 
+function calcularprecodoproduto() {
+  const calc = parseFloat (
+    document.getElementById("calcule").value
+  );
+
+
+const precoKg = 29.90;
+
+  
+
+  const precoFinal = precoKg * calc;
+
+  document.getElementById("resultado").textContent =
+    `Preço: R$ ${precoFinal.toFixed(2)}`;
+
+
+}
 
 
   
